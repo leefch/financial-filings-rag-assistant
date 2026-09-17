@@ -1,0 +1,26 @@
+GLOBEX INDUSTRIES
+Form 10-K excerpt (synthetic sample for testing - not a real company)
+
+Item 1. Business
+Globex Industries is a diversified specialty chemicals producer serving the
+coatings, adhesives, and water-treatment markets. The company operates twelve
+manufacturing plants across North America and Europe and sells through both
+direct sales and distributors.
+
+Item 7. Management's Discussion and Analysis
+Net sales for fiscal 2024 were $3.05 billion, essentially flat versus $3.07
+billion in fiscal 2023, as pricing gains were offset by lower volumes in the
+coatings market. Adjusted EBITDA was $512 million, a margin of 16.8%. The
+company reduced net debt by $210 million during the year and ended the period
+with a net-debt-to-EBITDA ratio of 2.1x, down from 2.6x a year earlier.
+
+The company declared dividends of $1.28 per share during fiscal 2024 and
+repurchased $150 million of common stock under its existing authorization.
+
+Item 1A. Risk Factors
+Globex's raw material costs, particularly petrochemical feedstocks, are volatile
+and can compress margins when the company is unable to pass through cost
+increases. Environmental regulation is a significant and increasing compliance
+cost, and the company is responsible for remediation at several legacy sites.
+Demand in the coatings segment is tied to construction and automotive
+production, both of which are cyclical.

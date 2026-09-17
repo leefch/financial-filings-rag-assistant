@@ -1,0 +1,29 @@
+ACME CORPORATION
+Form 10-K excerpt (synthetic sample for testing - not a real company)
+
+Item 1. Business
+ACME Corporation designs and manufactures industrial automation equipment for
+warehouse and logistics customers. The company operates two segments: Robotics
+and Aftermarket Services. Founded in 1998, ACME is headquartered in Columbus,
+Ohio and employs approximately 4,200 people as of the fiscal year end.
+
+Item 7. Management's Discussion and Analysis
+Total revenue for fiscal year 2024 was $1.82 billion, an increase of 11% from
+$1.64 billion in fiscal 2023. The Robotics segment contributed $1.24 billion of
+total revenue, while Aftermarket Services contributed $580 million. Gross margin
+improved to 38.5% from 36.1% in the prior year, driven by higher-margin service
+contracts and improved manufacturing efficiency. Operating income was $246
+million, and net income was $181 million, or $3.42 per diluted share.
+
+Research and development expense was $138 million in fiscal 2024, representing
+approximately 7.6% of revenue, consistent with the company's stated target of
+investing 7% to 8% of revenue in R&D.
+
+Item 1A. Risk Factors
+The company's results depend heavily on capital spending by logistics and
+e-commerce customers, which is cyclical and sensitive to interest rates. A
+prolonged slowdown in warehouse construction would reduce demand for the
+Robotics segment. ACME also depends on a limited number of suppliers for
+precision servo motors; disruption at these suppliers could delay shipments.
+Approximately 22% of revenue is generated outside the United States, exposing
+the company to currency fluctuation and trade policy risk.

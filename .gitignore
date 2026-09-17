@@ -1,0 +1,19 @@
+# notes stay local - do not commit markdown
+*.md
+
+# secrets
+.env
+
+# derived data - rebuild the index, don't commit it
+chroma_db/
+
+# fetched real filings (keep the synthetic samples that ship with the repo)
+data/sample_filings/*_10k.txt
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/

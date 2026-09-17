@@ -1,0 +1,85 @@
+financial-filings-rag-assistant — how to run
+============================================
+
+A governed RAG Q&A system over financial filings (LangChain + Claude):
+citation-grounded answers, cross-encoder reranking, prompt-injection / PII
+guardrails, and an automated RAGAS evaluation gate.
+
+Requirements
+------------
+- Python 3.12 ,  I tested my 3.14, python crushed with streamlit. 
+- An Anthropic API key (starts with sk-ant-). Get one at console.anthropic.com
+  -> Settings -> API Keys. A Claude Pro subscription does NOT include this;
+  the API is billed separately, pay-per-token (cents for this project).
+- First index build downloads two small local models (embedding + reranker)
+  from Hugging Face, so the first run needs internet.
+
+
+Setup
+-----
+1. Open a terminal in this folder.
+
+2. (Optional but recommended) create a virtual environment:
+
+   Windows (PowerShell):
+       py -m venv .venv
+       .\.venv\Scripts\Activate.ps1
+
+   macOS / Linux:
+       python3 -m venv .venv
+       source .venv/bin/activate
+
+3. Install dependencies:
+       pip install -r requirements.txt
+
+4. Add your API key:
+   - Copy .env.example to .env
+     Windows:  copy .env.example .env
+     mac/Linux: cp .env.example .env
+   - Open .env and paste your key after ANTHROPIC_API_KEY=
+
+
+Build the index
+---------------
+5. Chunk + embed the sample filings into a local vector store:
+       python ingest/build_index.py
+
+   (First run downloads the embedding + rerank models; later runs are fast.)
+
+
+Run it
+------
+6. Launch the web UI:
+       streamlit run app.py
+
+   Ask about the filings. You get a cited answer, or an explicit refusal when
+   the system can't ground the answer or the question is out of scope.
+
+
+Evaluate (the quality gate)
+---------------------------
+7. Fast guardrail tests (no API key, no index needed):
+       pytest -m "not slow"
+
+8. Full RAGAS evaluation (needs the API key and a built index):
+       python eval/run_eval.py
+
+   Prints faithfulness / answer relevancy / context precision / recall and
+   passes or fails against the thresholds in eval/run_eval.py.
+
+
+Optional: use real SEC filings instead of the samples
+-----------------------------------------------------
+9. Set EDGAR_UA in .env to "Your Name your@email.com", then:
+       python ingest/fetch_filings.py AAPL MSFT
+   Re-run step 5 to rebuild the index, and add matching questions to
+   eval/testset.py so the eval still has ground truth.
+
+
+Notes
+-----
+- Guardrail tests (step 7) run fully offline — quick way to confirm the safety
+  logic works before spending anything.
+- Only steps 6 and 8 call Claude.
+- chroma_db/ (the index) is derived data and is gitignored — rebuild it with
+  step 5, don't commit it.
